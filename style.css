@@ -62,6 +62,7 @@ body {
 
 .dots.active {
     background: #444;
+    transition: .2s;
 }
 .single-digit , .dozen-digit {
     display: flex;

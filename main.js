@@ -35,10 +35,14 @@ const time = () => {
     // Digital timer
     digitSeconds < 10 ? digitSeconds = `0${digitSeconds}` : digitSeconds;
     digitMinutes < 10 ? digitMinutes = `0${digitMinutes}` : digitMinutes;
+    digitHours <= 0 ? digitHours = '00' : digitHours;
 
-    digital.seconds.textContent = digitSeconds;
-    digital.minutes.textContent = digitMinutes;
+    digital.seconds.innerHTML = `<span class="separator">: </span>${digitSeconds}`;
+    digital.minutes.innerHTML = `<span class="separator">: </span>${digitMinutes}`;
     digital.hours.textContent = digitHours;
+
+    const separator = [...document.querySelectorAll('.separator')];
+    seconds % 2 === 0 ? separator.map(item => item.style.setProperty('opacity', '1')) : separator.map(item => item.style.setProperty('opacity', '0'));
 
     //Binary Timer
     binaryTime(binary.hours, hours);
