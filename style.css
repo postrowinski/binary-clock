@@ -1,0 +1,99 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 300px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-one {
+    flex: 1;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+/* CLOCK */
+.units > * {
+    flex: 1;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+[class^=dot] {
+    width: 40px;
+    height: 40px;
+    background: #eeeeee;
+    border-radius: 50%;
+    position: relative;
+}
+
+[class^=dot]::after {
+    position: absolute;
+    color: black;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.dots.active {
+    background: #444;
+}
+.single-digit , .dozen-digit {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.binary-hours, .binary-minutes, .binary-seconds {
+    flex-direction: row-reverse;
+}
+
+.binary-seconds .single-digit > .dot-1::after {
+    content: '1';
+}
+
+.binary-seconds .single-digit > .dot-2::after {
+    content: '2';
+}
+
+.binary-seconds .single-digit > .dot-4::after {
+    content: '4';
+}
+
+.binary-seconds .single-digit > .dot-8::after {
+    content: '8';
+}
+
+.digital-display, .binary-display, .units, .binary-clock {
+    width: 100%;
+}
+
+.digital-display > * {
+    font-size: 50px;
+    text-align: center;
+    flex: 1;
+}

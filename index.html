@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Binary timer</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="flex-center">
+    <div class="container flex-center flex-column">
+        <div class="binary-display flex-center flex-column">
+            <div class="units flex-center">
+                <span>HH</span>
+                <span>MM</span>
+                <span>SS</span>
+            </div>
+            <div class="binary-clock flex-center flex-end">
+                <div class="binary-hours flex-one flex-center flex-wrap flex-end">
+                    <div class="single-digit">
+                        <div class="dots dot-1"></div>
+                        <div class="dots dot-2"></div>
+                        <div class="dots dot-4"></div>
+                        <div class="dots dot-8"></div>
+                    </div>
+                    <div class="dozen-digit">
+                        <div class="dots dot-10"></div>
+                        <div class="dots dot-10"></div>
+                    </div>
+                </div>
+                <div class="binary-minutes flex-one flex-center flex-wrap flex-end">
+                    <div class="single-digit">
+                        <div class="dots dot-1"></div>
+                        <div class="dots dot-2"></div>
+                        <div class="dots dot-4"></div>
+                        <div class="dots dot-8"></div>
+                    </div>
+                    <div class="dozen-digit">
+                        <div class="dots dot-10"></div>
+                        <div class="dots dot-20"></div>
+                        <div class="dots dot-40"></div>
+                    </div>
+                </div>
+                <div class="binary-seconds flex-one flex-center flex-wrap flex-end">
+                    <div class="single-digit">
+                        <div class="dots dot-1"></div>
+                        <div class="dots dot-2"></div>
+                        <div class="dots dot-4"></div>
+                        <div class="dots dot-8"></div>
+                    </div>
+                    <div class="dozen-digit">
+                        <div class="dots dot-10"></div>
+                        <div class="dots dot-20"></div>
+                        <div class="dots dot-40"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="digital-display flex-center">
+            <span class="digital-hours"></span>
+            <span class="digital-minutes"></span>
+            <span class="digital-seconds"></span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
