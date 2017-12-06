@@ -11,13 +11,13 @@ const binary = {
 };
 
 
-const binaryCheck = function (totalTime, timeUnit, selector) {
+const binaryCheck = (totalTime, timeUnit, selector) => {
     if (totalTime / timeUnit >= 1) {
         selector.querySelector(`.dot-${timeUnit}`).classList.add('active');
         return totalTime - timeUnit;
     }
     return totalTime;
-};
+}
 
 const binaryTime = (selector, unitTime) => {
     const dots = [...selector.querySelectorAll('.dots')];
