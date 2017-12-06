@@ -10,7 +10,6 @@ const binary = {
     seconds: document.querySelector('.binary-seconds')
 };
 
-
 const binaryCheck = (totalTime, timeUnit, selector) => {
     if (totalTime / timeUnit >= 1) {
         selector.querySelector(`.dot-${timeUnit}`).classList.add('active');
@@ -24,9 +23,7 @@ const binaryTime = (selector, unitTime) => {
     const binaryNumbers = [40, 20, 10, 8, 4, 2, 1];
     let time = unitTime;
     dots.map(dot => dot.classList.remove('active'));
-    binaryNumbers.map(unit => {
-         return time = binaryCheck(time, unit, selector);
-    });
+    binaryNumbers.map(unit => time = binaryCheck(time, unit, selector));
 }
 
 const time = () => {
